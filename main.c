@@ -7,6 +7,12 @@ int main(void) {
     srand(time(NULL));
     printf("insere il numero");
     scanf("%d", &user);
+
+    while (user>10 || user< 0) {
+        printf("valore non valido");
+        scanf("%d",&user);
+    }
+
     for (int i = 0; i < 100; i++) {
         ran = n[i]= rand() % (min - max + 1) + min;
         if (ran == user) {
